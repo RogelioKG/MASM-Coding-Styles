@@ -1,5 +1,7 @@
 # MASM Coding Style Guides
 
+---
+
 ## **大綱**
 + [**命名**](https://github.com/RogelioKG/MASM-Coding-Styles#%E5%91%BD%E5%90%8D)
 + [**對齊**](https://github.com/RogelioKG/MASM-Coding-Styles#%E5%B0%8D%E9%BD%8A)
@@ -171,10 +173,10 @@
     ; Returns:
     ;     ...
     ; Example:
-    ;     字串 string 為 "012345678"
+    ;     字串 string 為 "012345678", 0
     ;     INVOKE StrRemove, OFFSET [string + 2], 5
     ;     意思是從 2 開始，移除 5 個字元
-    ;     字串 string 應變為 "0178"
+    ;     字串 string 應變為 "0178", 0
     ; ------------------------------------------------
     StrRemove PROC, pStart:PTR BYTE, nChars:DWORD
 
