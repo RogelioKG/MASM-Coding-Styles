@@ -81,6 +81,22 @@
     ```
     > 巢狀區塊的各區塊也須對齊，但條件假指令不在此限
     ```nasm
+    ; ------------------------------------------------
+    ; Name:
+    ;     FastPow
+    ; Brief:
+    ;     快速冪
+    ; Uses:
+    ;     eax ebx edx
+    ; Params:
+    ;     x = DWORD 底數 (base)
+    ;     n = DWORD 指數 (power)
+    ; Returns:
+    ;     eax = base 的 power 次方
+    ; Example:
+    ;     INVOKE FastPow, 2, 5
+    ;     eax 應為 32
+    ; ------------------------------------------------
     FastPow PROC, x:DWORD, n:DWORD
         mov edx, 0
         mov eax, 1              ; eax = 1
@@ -89,9 +105,9 @@
             .if n & 1           ; 如果最低位元為 1         (此時 eax = result，ebx = base)
                 mul ebx         ; result = result * base  (此時 eax = result * base，ebx = base)
             .endif
-            xchg eax, ebx       ; base 與 result 交換      (若有通過 .if，此時 eax = base，ebx = result * base)
-            mul  eax            ; eax = base * base       (若有通過 .if，此時 eax = base * base，ebx = result * base)
-            xchg eax, ebx       ; base 與 result 交換      (若有通過 .if，此時 eax = result * base，ebx = base * base)
+            xchg eax, ebx       ; base 與 result 交換     (若有進入 .if，此時 eax = base，ebx = result * base)
+            mul  eax            ; eax = base * base      (若有進入 .if，此時 eax = base * base，ebx = result * base)
+            xchg eax, ebx       ; base 與 result 交換     (若有進入 .if，此時 eax = result * base，ebx = base * base)
             shr  n, 1           ; 吃掉最低位元
         .endw
         ret
