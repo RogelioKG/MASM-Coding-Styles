@@ -2,11 +2,20 @@
 
 ---
 ## **大綱**
++ [**Highlighting**]()
 + [**命名**](https://github.com/RogelioKG/MASM-Coding-Styles#%E5%91%BD%E5%90%8D)
 + [**書寫習慣**](https://github.com/RogelioKG/MASM-Coding-Styles#%E6%9B%B8%E5%AF%AB%E7%BF%92%E6%85%A3)
 + [**對齊**](https://github.com/RogelioKG/MASM-Coding-Styles#%E5%B0%8D%E9%BD%8A)
 + [**建議**](https://github.com/RogelioKG/MASM-Coding-Styles#%E5%BB%BA%E8%AD%B0)
 + [**子程序**](https://github.com/RogelioKG/MASM-Coding-Styles#%E5%AD%90%E7%A8%8B%E5%BA%8F)
+
+---
+## **Highlighting**
+使用 AsmDude2022 (v1.9.8.0) 作為 highlighting 與代碼提示的工具，以下是語法高亮顏色規範：
+
+![alt=highlighting-1](https://raw.githubusercontent.com/RogelioKG/MASM-Coding-Styles/main/highlighting-1.png)
+
+![alt=highlighting-2](https://raw.githubusercontent.com/RogelioKG/MASM-Coding-Styles/main/highlighting-2.png)
 
 ---
 ## **命名**
