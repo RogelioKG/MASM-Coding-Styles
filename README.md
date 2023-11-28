@@ -56,9 +56,9 @@
     mov  eax, v1        ; 取出 v1
     cmp  v2, eax        ; 與 v2 做比較
     ```
-- **標籤須統一置於 .data 上方**
+- **symbol 須統一置於 .data 上方**
     ```nasm
-    ; label
+    ; symbol
     BoxWidth  = 7
     BoxHeight = 7
     
