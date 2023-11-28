@@ -38,6 +38,11 @@
         sub ecx, nChars
     .endif
     ```
+    你可以使用 TAB 排版，但你須確保他們輸出的是多個空白字元，而非製表字元，你可以在這裡調整設定：
+    ```
+    Tools->Options->Text Editor->All Languages->Tabs
+    ```
+    ![alt=tabs](https://raw.githubusercontent.com/RogelioKG/MASM-Coding-Styles/main/tabs.png)
 - **逗號後必有一個空格**
     ```nasm
     INVOKE StrRemove, OFFSET target1, 5
