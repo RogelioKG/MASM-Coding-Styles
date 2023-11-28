@@ -15,7 +15,7 @@
     > 全小寫
 - **Directive**
     > 有點全小寫 (`.data` / `.code` / `.while` / `.if` …)，其他全大寫 (`DWORD` / `INVOKE`)
-- **跳躍標籤**
+- **變數名稱 / 跳躍標籤**
     > `snake_case` (單字間底線區隔，單字首字母小寫)
 - **子程序標籤**
     > `PascalCase` (單字首字母大寫)，`main` 除外
@@ -29,22 +29,30 @@
         sub ecx, nChars
     .endif
     ```
-
 - **逗號後必有一個空格**
     ```nasm
     INVOKE StrRemove, OFFSET target1, 5
     ```
 - **冒號後不能有空格**
     ```nasm
-    StrRemove PROTO, pStart:PTR BYTE, nChars:DWORD
+    StrRemove    PROTO, pStart:PTR BYTE, nChars:DWORD
     ```
-
 - **註解分號後必有一個空格**
     ```nasm
     mov  eax, v1        ; 取出 v1
     cmp  v2, eax        ; 與 v2 做比較
     ```
-
+- **標籤須統一置於 .data 上方**
+    ```nasm
+    ; label
+    BoxWidth = 7
+    BoxHeight = 7
+    
+    .data
+    boxTop    BYTE    0DAh, (BoxWidth - 2) DUP(0C4h), 0BFh
+    boxBody   BYTE    0B3h, (BoxWidth - 2) DUP(' '), 0B3h
+    boxBottom BYTE    0C0h, (BoxWidth - 2) DUP(0C4h), 0D9h
+    ```
 ---
 ## **對齊**
 
@@ -54,15 +62,14 @@
     DifferentInputs PROTO, v1:DWORD, v2:DWORD, v3:DWORD
     StrRemove       PROTO, pStart:PTR BYTE, nChars:DWORD
     ```
-    
 - **名稱 / 型態 / 值**
     ```nasm
     .data
-    target1 BYTE  "111302502", 0
-    target2 BYTE  "111303545", 0
-    target3 BYTE  "999999999", 0
-    num     SBYTE -1
-    value   DWORD ?
+    target1    BYTE    "111302502", 0
+    target2    BYTE    "111303545", 0
+    target3    BYTE    "999999999", 0
+    num        SBYTE   -1
+    value      DWORD   ?
     ```
 - **命令列 / 註解**
     > 僅需區域對齊 (在一個子程序裡皆對齊即可)
