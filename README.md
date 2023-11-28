@@ -54,7 +54,7 @@
 - **標籤須統一置於 .data 上方**
     ```nasm
     ; label
-    BoxWidth = 7
+    BoxWidth  = 7
     BoxHeight = 7
     
     .data
