@@ -56,6 +56,11 @@
     mov  eax, v1        ; 取出 v1
     cmp  v2, eax        ; 與 v2 做比較
     ```
+- **struct 內須頭尾有空格鋪墊**
+    ```nasm
+    .data
+    point   COORD < 1, 2 >
+    ```
 - **symbol 須統一置於 .data 上方**
     ```nasm
     ; symbol
