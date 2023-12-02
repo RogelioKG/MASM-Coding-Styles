@@ -13,9 +13,9 @@
 ## [⬆️](https://github.com/RogelioKG/MASM-Coding-Styles#%EF%B8%8F-%E5%A4%A7%E7%B6%B1) **Highlighting** 
 使用 AsmDude2022 (v1.9.8.0) 作為 highlighting 與代碼提示的工具，以下是語法高亮顏色規範：
 
-![alt=highlighting-1](https://raw.githubusercontent.com/RogelioKG/MASM-Coding-Styles/main/highlighting-1.png)
+![alt=highlighting-1](https://raw.githubusercontent.com/RogelioKG/MASM-Coding-Styles/main/image/highlighting-1.png)
 
-![alt=highlighting-2](https://raw.githubusercontent.com/RogelioKG/MASM-Coding-Styles/main/highlighting-2.png)
+![alt=highlighting-2](https://raw.githubusercontent.com/RogelioKG/MASM-Coding-Styles/main/image/highlighting-2.png)
 
 ---
 ## [⬆️](https://github.com/RogelioKG/MASM-Coding-Styles#%EF%B8%8F-%E5%A4%A7%E7%B6%B1) **命名** 
@@ -39,10 +39,10 @@
     .endif
     ```
     你可以使用 TAB 排版，但你須確保他們輸出的是多個空白字元，而非製表字元，你可以在這裡調整設定：
-    ```
-    Tools->Options->Text Editor->All Languages->Tabs
-    ```
-    ![alt=tabs](https://raw.githubusercontent.com/RogelioKG/MASM-Coding-Styles/main/tabs.png)
+    > 選擇插入空格
+    ![alt=tabs1](https://github.com/RogelioKG/MASM-Coding-Styles/blob/main/image/tabs1.png)
+    > 不使用自適性格式化
+    ![alt=tabs2](https://github.com/RogelioKG/MASM-Coding-Styles/blob/main/image/tabs2.png)
 - **逗號後必有一個空格**
     ```nasm
     INVOKE StrRemove, OFFSET target1, 5
