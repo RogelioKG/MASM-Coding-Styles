@@ -26,9 +26,10 @@
     > 有點全小寫 (`.data` / `.code` / `.while` / `.if` …)，其他全大寫 (`DWORD` / `INVOKE`)
 - **變數名稱 / 跳躍標籤**
     > `snake_case` (單字間底線區隔，單字首字母小寫)
-- **子程序標籤**
+- **子程序名稱**
     > `PascalCase` (單字首字母大寫)
-
+- **巨集名稱**
+    > `mPascalCase` (開頭必為m，單字首字母大寫)
 ---
 ## [⬆️](https://github.com/RogelioKG/MASM-Coding-Styles#%EF%B8%8F-%E5%A4%A7%E7%B6%B1) **書寫習慣** 
 
