@@ -164,7 +164,7 @@
     - **Brief**
       > 子程序功能 (簡短介紹)
     - **Uses**
-      > 子程序使用到哪些暫存器 (用 USES 關鍵字的暫存器也要列進來)
+      > 子程序使用到哪些暫存器 (不含回傳)
     - **Params**
       > 子程序使用到哪些參數 (對齊方式如下)
     - **Returns**
@@ -180,7 +180,7 @@
     ; Brief:
     ;     快速冪
     ; Uses:
-    ;     eax ebx edx
+    ;     ebx edx
     ; Params:
     ;     x = DWORD 底數 (base)
     ;     n = DWORD 指數 (power)
